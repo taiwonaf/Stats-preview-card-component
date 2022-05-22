@@ -1,0 +1,153 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Lexend+Deca&display=swap');
+
+:root {
+    --very-dark-blue-main-bg: hsl(233, 47%, 7%);
+    --dark-desaturated-blue-card-bg: hsl(244, 38%, 16%);
+    --soft-violet-accent: hsl(277, 64%, 61%);
+    --slightly-transparent-white-main-paragraph: hsla(0, 0%, 100%, 0.75);
+    --slightly-transparent-white-stat-headings: hsla(0, 0%, 100%, 0.6);
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    font-family: 'Lexend Deca', sans-serif;
+    font-size: 15px;
+    background-color: var(--very-dark-blue-main-bg);
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+* {
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+}
+
+h1 {
+    font-size: 36px;
+    color: white;
+}
+
+p {
+    font-size: 15px;
+    color: var(--slightly-transparent-white-main-paragraph);
+}
+
+span {
+    color: var(--soft-violet-accent);
+}
+
+.container {
+    max-width: 1110px;
+    background-color: var(--dark-desaturated-blue-card-bg);
+    margin: 40px;
+    display: flex;
+    align-items: center;
+    border-radius: 5px;
+}
+
+.left {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    justify-self: flex-end;
+    padding: 70px 115px 64px 64px;
+}
+
+.stats {
+    margin-top: 30px;
+    padding-right: 5px;
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-content: center;
+    font-size: 15px;
+}
+.stat {
+    margin-right:10px ;
+}
+.stat h1{
+    font-size: 28px;
+    text-transform: capitalize;
+}
+
+.stat p {
+    color: var(--slightly-transparent-white-stat-headings);
+}
+
+.text h1 {
+    margin-bottom: 15px;
+}
+
+.text p {
+    margin-top: 15px;
+}
+
+.text {
+    margin-bottom: 40px;
+}
+
+.right {
+    height: 100%;
+    width: 50%;
+    background-image: url("./images/image-header-desktop.jpg");
+    background-size: cover;
+    position: relative;
+}
+
+.overlay {
+    background-color: hsl(277, 78%, 13%);
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    opacity: 0.8;
+}
+
+@media (max-width: 678px) {
+
+    
+    .container {
+        margin-top: 30px;
+        flex-direction: column;
+    }
+
+    .right {
+        order: -1;
+        width: 100%;
+        height: 300px;
+        background-image: url("./images/image-header-mobile.jpg");
+    }
+
+    .left {
+        width: 100%;
+        padding: 30px;
+        text-align: center;
+    }
+
+    .stats {
+        flex-direction: column;
+        padding: 0px;
+        margin-top: 0px;
+    }
+
+    .stat {
+        margin:10px 0px;
+    }
+
+    .stat h1 {
+        font-size: 21px;
+    }
+
+    .text h1 {
+        font-size: 28px;
+    }
+
+    p {
+        font-size: 16px;
+    }
+}
