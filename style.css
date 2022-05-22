@@ -73,11 +73,12 @@ span {
 }
 .stat h1{
     font-size: 28px;
-    text-transform: capitalize;
+    text-transform: uppercase;
 }
 
 .stat p {
     color: var(--slightly-transparent-white-stat-headings);
+    text-transform: uppercase;
 }
 
 .text h1 {
@@ -98,6 +99,7 @@ span {
     background-image: url("./images/image-header-desktop.jpg");
     background-size: cover;
     position: relative;
+    border-radius: 0px 5px 5px 0px;
 }
 
 .overlay {
@@ -117,6 +119,7 @@ span {
     }
 
     .right {
+        border-radius: 5px 5px 0px 0px;
         order: -1;
         width: 100%;
         height: 300px;
